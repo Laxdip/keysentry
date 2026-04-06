@@ -1,4 +1,4 @@
-# 🔑 KeySentry — SSH Key Auditor & Expiry Tracker
+# 🔑 KeySentry - SSH Key Auditor & Expiry Tracker
 
 Scan your system for SSH keys, detect weak algorithms, unprotected private keys, and keys that are overdue for rotation.
 
@@ -8,14 +8,14 @@ Scan your system for SSH keys, detect weak algorithms, unprotected private keys,
 
 ## Features
 
-- 🔍 **Auto-discovers** SSH keys in `~/.ssh` and system paths
-- 🔐 **Passphrase detection** — flags private keys with no passphrase
-- ⚠️ **Weak algorithm detection** — DSA (deprecated), RSA < 2048 bits
-- 📅 **Age tracking** — warns on keys older than 1 year, critical at 2 years
-- 🔑 **Fingerprints** — MD5 and SHA-256 for every key
-- 📊 **Reports** — HTML dashboard, JSON, CSV export
-- 🖥️ **Cross-platform** — Windows, Linux, macOS
-- 🎨 **Color terminal output** with risk levels
+- **Auto-discovers** SSH keys in `~/.ssh` and system paths
+- **Passphrase detection** — flags private keys with no passphrase
+- **Weak algorithm detection** — DSA (deprecated), RSA < 2048 bits
+- **Age tracking** — warns on keys older than 1 year, critical at 2 years
+- **Fingerprints** — MD5 and SHA-256 for every key
+- **Reports** — HTML dashboard, JSON, CSV export
+- **Cross-platform** — Windows, Linux, macOS
+- **Color terminal output** with risk levels
 
 ---
 
