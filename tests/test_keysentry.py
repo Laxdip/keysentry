@@ -3,7 +3,7 @@ tests/test_keysentry.py
 ───────────────────────
 Full test suite for KeySentry — no external dependencies required.
 
-Author: Prasad
+Author: Prasadd
 """
 
 from __future__ import annotations
