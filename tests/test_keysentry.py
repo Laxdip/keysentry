@@ -6,7 +6,7 @@ Full test suite for KeySentry — no external dependencies required.
 Author: Prasad
 """
 
-f
+from __future__ import annotations
 
 import base64
 import hashlib
