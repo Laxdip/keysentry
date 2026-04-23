@@ -1,4 +1,4 @@
-# 🔑 KeySentry - SSH Key Auditor & Expiry Tracker
+# KeySentry - SSH Key Auditor & Expiry Tracker
 
 Scan your system for SSH keys, detect weak algorithms, unprotected private keys, and keys that are overdue for rotation.
 
