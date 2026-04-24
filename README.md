@@ -2,7 +2,7 @@
 
 Scan your system for SSH keys, detect weak algorithms, unprotected private keys, and keys that are overdue for rotation.
 
-**Zero external dependencies — pure Python stdlib.**
+**Zero external dependencies - pure python stdlib.**
 
 # Output
 
@@ -80,51 +80,6 @@ Options:
 
 ---
 
-## Example Output
-
-```
-  _  __          _____            _
- | |/ /___ _   _/ ____|  ___ _ __ | |_ _ __ _   _
- | ' // _ \ | | \___ \ / _ \ '_ \| __| '__| | | |
- | . \  __/ |_| |___) |  __/ | | | |_| |  | |_| |
- |_|\_\___|\__, |____/ \___|_| |_|\__|_|   \__, |
-            |___/                           |___/
-
-  SSH Key Auditor & Expiry Tracker
-  Author: Prasad
-
-  Scanning: /home/user/.ssh
-
-  Path                        Type     Algorithm          Bits  Passphrase  Age     Risk
-  ────────────────────────────────────────────────────────────────────────────────────────
-  ~/.ssh/id_rsa               private  ssh-rsa            2048  ✗ None      1y 45d  CRITICAL
-    ⚠  Private key has NO passphrase
-    ⚠  Key is 1y 45d old — rotation recommended
-  ~/.ssh/id_ed25519            private  ssh-ed25519        256   ✓ Yes       45d     LOW
-  ~/.ssh/old_key.pub           public   ssh-dss            1024  —           3y 2d   CRITICAL
-    ⚠  DSA keys are deprecated and considered insecure
-    ⚠  Key is 3y 2d old — strongly consider rotating
-
-  ── SUMMARY ─────────────────────────────────────────────────────────
-  Total keys found :  3
-  ● Critical issues            2
-  ● High issues                0
-  ● Medium issues              0
-  ● Low / clean                1
-  ● No passphrase (priv)       1
-  ● Old keys (>365d)           2
-  ● DSA keys (deprecated)      1
-  ● Weak RSA (<2048b)          0
-  ────────────────────────────────────────────────────────────────────
-
-  Recommendations:
-  1. Replace all DSA keys immediately — they are broken.
-  2. Add passphrases to unprotected private keys: ssh-keygen -p -f <key>
-  3. Rotate keys older than 1 year.
-```
-
----
-
 ## What Gets Checked
 
 | Check | Detail |
@@ -138,7 +93,7 @@ Options:
 
 ---
 
-## File Structure
+## Structure
 
 ```
 keysentry/
@@ -161,7 +116,7 @@ keysentry/
 python tests/test_keysentry.py
 ```
 
-No pytest needed — runs with pure stdlib.
+No pytest needed - runs with pure stdlib.
 
 ---
 
