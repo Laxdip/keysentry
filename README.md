@@ -64,6 +64,7 @@ Options:
 ## What Gets Checked
 
 CRITICAL(DSA, RSA<2048) | HIGH(no passphrase, age>2y) | MEDIUM(age>1y, RSA<4096 → migrate to Ed25519)
+
 ---
 
 ## Running Tests
