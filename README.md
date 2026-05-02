@@ -4,7 +4,7 @@ Scan your system for SSH keys, detect weak algorithms, unprotected private keys,
 
 **Zero external dependencies - pure python stdlib.**
 
-# Output
+## Output
 
 ![SSH Key Auditor in action](screenshots/ssh.png)
 
