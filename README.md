@@ -63,8 +63,7 @@ Options:
 
 ## What Gets Checked
 
-CRITICAL(DSA,RSA<2048) | HIGH(NoPass,Age>2y) | MEDIUM(Age>1y,RSA<4096→Ed25519)
-
+CRITICAL(DSA,RSA<2048) | HIGH(no-passphrase,age>2y) | MEDIUM(age>1y,RSA<4096→Ed25519)
 ---
 
 ## Running Tests
