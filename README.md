@@ -93,23 +93,6 @@ Options:
 
 ---
 
-## Structure
-
-```
-keysentry/
-├── keysentry/
-│   ├── __init__.py     # Package metadata
-│   ├── core.py         # Key parsing, analysis, risk scoring
-│   ├── cli.py          # CLI + terminal rendering
-│   └── report.py       # JSON / CSV / HTML exporters
-├── tests/
-│   └── test_keysentry.py   # 49 tests (zero external deps)
-├── run.py              # Entry point
-└── README.md
-```
-
----
-
 ## Running Tests
 
 ```bash
