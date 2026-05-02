@@ -13,13 +13,13 @@ Scan your system for SSH keys, detect weak algorithms, unprotected private keys,
 ## Features
 
 - **Auto-discovers** SSH keys in `~/.ssh` and system paths
-- **Passphrase detection** — flags private keys with no passphrase
-- **Weak algorithm detection** — DSA (deprecated), RSA < 2048 bits
-- **Age tracking** — warns on keys older than 1 year, critical at 2 years
-- **Fingerprints** — MD5 and SHA-256 for every key
-- **Reports** — HTML dashboard, JSON, CSV export
+- **Passphrase detection** — flags unprotected private keys
+- **Weak algorithm detection** — DSA, RSA < 2048 bits
+- **Age tracking** — warns at 1 year, critical at 2 years
+- **Fingerprints** — MD5 & SHA-256 for every key
+- **Reports** — HTML, JSON, CSV export
 - **Cross-platform** — Windows, Linux, macOS
-- **Color terminal output** with risk levels
+- **Color output** — with risk levels
 
 ---
 
@@ -37,29 +37,10 @@ Scan your system for SSH keys, detect weak algorithms, unprotected private keys,
 ## Quick Start
 
 ```bash
-# Clone
 git clone https://github.com/Laxdip/keysentry.git
 cd keysentry
-
-# Run (no install needed)
-python run.py
-
-# Scan a specific path
-python run.py --path ~/.ssh
-
-# Recursive scan
-python run.py --path /etc/ssh --recursive
-
-# Export HTML report
-python run.py --export report.html
-
-# Show only HIGH and above
-python run.py --risk HIGH
-
-# JSON output
-python run.py --format json
+python run.py --path ~/.ssh --export report.html
 ```
-
 ---
 
 ## Usage
@@ -68,12 +49,12 @@ python run.py --format json
 python run.py [OPTIONS]
 
 Options:
-  --path, -p DIR      Path(s) to scan (default: ~/.ssh)
+  --path, -p DIR      Path to scan (default: ~/.ssh)
   --recursive, -r     Recurse into subdirectories
-  --format, -f        Output format: table | json | csv (default: table)
-  --export, -e FILE   Export to file (.html / .json / .csv)
-  --risk LEVEL        Filter by minimum risk: LOW | MEDIUM | HIGH | CRITICAL
-  --no-summary        Skip the summary panel
+  --format, -f FORMAT table | json | csv
+  --export, -e FILE   Export to .html/.json/.csv
+  --risk LEVEL        LOW | MEDIUM | HIGH | CRITICAL
+  --no-summary        Skip summary panel
   --version           Show version
   --help              Show help
 ```
@@ -82,14 +63,7 @@ Options:
 
 ## What Gets Checked
 
-| Check | Detail |
-|---|---|
-| DSA keys | Flagged CRITICAL — broken since 2023 |
-| RSA < 2048 bits | Flagged HIGH/CRITICAL |
-| RSA < 4096 bits | Suggests migration to Ed25519 |
-| No passphrase | Flagged HIGH — private keys are unprotected |
-| Age > 1 year | Flagged MEDIUM |
-| Age > 2 years | Flagged HIGH |
+CRITICAL(DSA,RSA<2048) | HIGH(NoPass,Age>2y) | MEDIUM(Age>1y,RSA<4096→Ed25519)
 
 ---
 
@@ -99,7 +73,7 @@ Options:
 python tests/test_keysentry.py
 ```
 
-No pytest needed - runs with pure stdlib.
+> No pytest needed - runs with pure stdlib.
 
 ---
 
