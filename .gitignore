@@ -1,32 +1,41 @@
-# Python
+# Python cache
 __pycache__/
 *.py[cod]
-*.so
-.Python
+*.pyo
+*.pyd
+
+# Virtual environment
 venv/
 env/
 .venv
+ENV/
 
 # Testing
 .pytest_cache/
+.tox/
 .coverage
 htmlcov/
-.tox/
 
-# KeySentry output reports
+# KeySentry generated reports
 *.html
 *.csv
 *.json
 
-# IDE
+# IDE files
 .idea/
 .vscode/
 *.iml
+.vscode/
 
-# OS
+# OS junk
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Logs
+# Log files
 *.log
+
+# Backup files
+*.bak
+*.swp
+*~
