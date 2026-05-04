@@ -13,7 +13,7 @@ env/
 htmlcov/
 .tox/
 
-# KeySentry output reports (examples)
+# KeySentry output reports
 *.html
 *.csv
 *.json
@@ -27,3 +27,6 @@ htmlcov/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Logs
+*.log
