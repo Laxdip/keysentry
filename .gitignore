@@ -17,3 +17,8 @@ htmlcov/
 *.html
 *.csv
 *.json
+
+# IDE
+.idea/
+.vscode/
+*.iml
